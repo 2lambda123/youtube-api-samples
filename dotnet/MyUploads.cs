@@ -20,7 +20,7 @@ namespace Google.Apis.YouTube.Samples
   /// </summary>
   internal class MyUploads
   {
-    [STAThread]
+    [System.STAThread]
     static void Main(string[] args)
     {
       Console.WriteLine("YouTube Data API: My Uploads");
@@ -42,7 +42,7 @@ namespace Google.Apis.YouTube.Samples
       Console.ReadKey();
     }
 
-    private async Task Run()
+    private async Task RunAsync()
     {
       UserCredential credential;
       using (var stream = new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read))
